@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <style>
     body{
         align-items: center;
@@ -13,7 +14,7 @@
         padding: 4px;
         justify-content: center;
         width: 100px;
-        background-color: teal;
+        background-color: rgb(4, 159, 159);
         color: white;
         border-radius: 4px;
     }
@@ -29,7 +30,7 @@
                             <path d="M 24.001953 4.0039062 C 23.233953 4.0039062 22.466359 4.2963125 21.880859 4.8828125 L 0.88085938 25.882812 C -0.29114062 27.055812 -0.29114062 28.950047 0.88085938 30.123047 C 2.0058594 31.256047 3.809375 31.295859 4.984375 30.255859 L 6.1347656 29.109375 C 6.3307656 28.922375 6.6457969 28.922375 6.8417969 29.109375 C 7.0367969 29.309375 7.0367969 29.629406 6.8417969 29.816406 L 5.828125 30.828125 C 5.574125 31.081125 5.2969531 31.29575 5.0019531 31.46875 L 5.0019531 47.003906 L 4.9980469 47.001953 C 3.8970469 47.001953 0.99804688 47.229766 0.99804688 47.509766 C 0.99804687 47.775766 3.8970469 48.001953 4.9980469 48.001953 L 5.0019531 48 L 5.0019531 48.001953 L 42.998047 48.001953 L 42.998047 48 L 43.003906 48.001953 C 44.104906 48.001953 47.003906 47.775766 47.003906 47.509766 C 47.003906 47.229766 44.104906 47.001953 43.003906 47.001953 L 42.998047 47.005859 L 42.996094 31.46875 C 42.703094 31.29575 42.426781 31.081125 42.175781 30.828125 L 41.162109 29.814453 C 40.967109 29.627453 40.967109 29.307422 41.162109 29.107422 C 41.358109 28.920422 41.673141 28.920422 41.869141 29.107422 L 43.019531 30.255859 C 44.195531 31.295859 45.996047 31.254094 47.123047 30.121094 C 48.295047 28.948094 48.295047 27.055813 47.123047 25.882812 L 39.003906 17.761719 L 39.003906 10.001953 L 40.005859 9.0019531 L 40.005859 8.0019531 L 33.003906 8.0019531 L 33.003906 9.0019531 L 34.003906 10.001953 L 34.003906 11.349609 L 35.841797 13.189453 C 36.036797 13.376453 36.036797 13.696484 35.841797 13.896484 C 35.645797 14.083484 35.330766 14.083484 35.134766 13.896484 L 26.123047 4.8828125 C 25.537547 4.2963125 24.769953 4.0039062 24.001953 4.0039062 z M 24 6.0058594 C 24.256 6.0058594 24.512531 6.103375 24.707031 6.296875 L 45.707031 27.296875 C 46.098031 27.682875 46.098031 28.321984 45.707031 28.708984 C 45.318031 29.095984 44.683922 29.095984 44.294922 28.708984 L 24.708984 9.1210938 C 24.317984 8.7340937 23.685922 8.7340937 23.294922 9.1210938 L 3.7070312 28.708984 C 3.3180313 29.094984 2.6839219 29.094984 2.2949219 28.708984 C 1.9039219 28.322984 1.9039219 27.683875 2.2949219 27.296875 L 23.294922 6.296875 C 23.489422 6.103375 23.744 6.0058594 24 6.0058594 z M 24.003906 21.001953 C 27.110906 21.001953 29.915469 22.214766 31.855469 24.134766 C 32.051469 24.334766 32.052422 24.641797 31.857422 24.841797 C 31.662422 25.041797 31.346391 25.041797 31.150391 24.841797 C 29.402391 23.108797 26.852906 22.001953 24.003906 22.001953 C 21.151906 22.001953 18.600562 23.108797 16.851562 24.841797 C 16.655562 25.041797 16.339531 25.041797 16.144531 24.841797 C 15.949531 24.641797 15.952438 24.334766 16.148438 24.134766 C 18.090438 22.214766 20.894906 21.001953 24.003906 21.001953 z M 18.994141 26.001953 L 29.001953 26.001953 L 29.001953 44.001953 L 18.994141 44.001953 L 18.994141 26.001953 z M 20.498047 31.001953 C 20.222047 31.001953 19.998047 31.229766 19.998047 31.509766 L 19.998047 38.482422 C 19.998047 38.749422 20.222047 38.974609 20.498047 38.974609 C 20.773047 38.974609 20.998047 38.749422 20.998047 38.482422 L 20.998047 31.509766 C 20.998047 31.229766 20.773047 31.001953 20.498047 31.001953 z M 17.001953 45.001953 L 31.001953 45.001953 C 31.551953 45.001953 32.001953 45.454953 32.001953 46.001953 L 32.001953 47.001953 L 16.001953 47.001953 L 16.001953 46.001953 C 16.001953 45.454953 16.449953 45.001953 17.001953 45.001953 z"></path>
                         </svg>
                     </a>
-                    <h1 class="text-[20px] font-sans mt-4">CLUEY CLUE CUES</h1>
+                    <h1 class="text-[20px] font-sans mt-0">CLUEY CLUE CUES</h1>
                 </div>
                 <div class="flex">
                     <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -52,11 +53,8 @@
 
     <main>
         <nav class="flex sticky">
-            <button title="To Dashboard!" class="teal-button" 
-            onclick="
-                alert('Come on!');
-            ">
-                Tasks
+            <button title="To Dashboard!" class="teal-button">
+                Dashboard
             </button>
 
             <button title="New job!" class="teal-button" 
@@ -97,11 +95,78 @@
         
         <hr class="bg-black">
         <div></div>
-        <div class="grid grid-cols-4">
-            <div class="border-grey-500 m-5 h-[300px] w-[300px] shadow-md hover:border-[2px]"></div>
-            <div class="border-grey-500 m-5 h-[300px] w-[300px] shadow-md hover:border-[2px]"></div>
-            <div class="border-grey-500 m-5 h-[300px] w-[300px] shadow-md hover:border-[2px]"></div>
-            <div class="border-grey-500 m-5 h-[300px] w-[300px] shadow-md hover:border-[2px]"></div>
+        <div class="grid grid-cols-3 m-5">
+            <div class="grid grid-cols-2">
+                <div class="border-grey-500 m-5 w-[400px] shadow-xl border-[2px] grid grid-cols-2">
+                    <div class="border-grey-500 bg-teal-300 p-2 h-[300px] shadow-xl border-[2px] rounded-[5px] grid">   
+                        <p class="ml-2 font-bold">Annual Sales</p>
+                        <nav class="grid grid-cols-2">
+                            <button class="m-1 border-[2px] bg-teal-500 rounded-[5px] shadow-xl text-white font-bold">Quarter 1</button>
+                            <button class="m-1 border-[2px] bg-teal-500 rounded-[5px] shadow-xl text-white font-bold">Quarter 2</button>
+                            <button class="m-1 border-[2px] bg-teal-500 rounded-[5px] shadow-xl text-white font-bold">Quarter 3</button>
+                            <button class="m-1 border-[2px] bg-teal-500 rounded-[5px] shadow-xl text-white font-bold">Quarter 4</button>
+                        </nav>
+
+                        <form class="m-1">
+                            <label for="product" class="font-bold">Select by product</label>
+                            <select name="product">
+                                <option>All</option>
+                                <option>Apple</option>
+                                <option>Banana</option>
+                                <option>Beans</option>
+                                <option>Cabbage</option>
+                                <option>Carrots</option>
+                                <option>Mango</option>
+                                <option>Orange</option>
+                            </select>
+                            <br>
+                            <button type="submit" class="p-1 mt-1 border-[2px] bg-teal-500 rounded-[5px] shadow-xl text-white font-bold">Submit</button>
+                            <br>
+                            <label for="category" class="font-bold">Select by category</label>
+                            <select name="category">
+                                <option>All</option>
+                                <option>Fruits</option>
+                                <option>Vegetables</option>
+                            </select>
+                            <br>
+                            <button type="submit" class="p-1 mt-1 border-[2px] bg-teal-500 rounded-[5px] shadow-xl text-white font-bold">Submit</button>
+                        </form>
+                    </div>
+                
+                    <div class="border-grey-500 rounded-[5px] p-2 bg-teal-300 h-[300px] shadow-md border-[2px] grid">
+                        <div class="border-grey-500 bg-teal-500 shadow-md border-[2px]">
+                            <form class="m-1">
+                                <label for="country" class="font-bold">Country</label>
+                                <select name="country">
+                                    <option>All</option>
+                                    <option>Australia</option>
+                                    <option>Canada</option>
+                                    <option>France</option>
+                                    <option>Germany</option>
+                                    <option>New Zealand</option>
+                                    <option>United Kingdom</option>
+                                    <option>United States</option>
+                                </select>
+                                <br>
+                                <button type="submit" class="p-1 mt-1 border-[2px] bg-teal-500 rounded-[5px] shadow-xl text-white font-bold">Submit</button>
+                            </form>
+                        </div>
+                        <div class="border-grey-500 bg-teal-300 shadow-md hover:border-[2px] h-[150px] m-5">Chap</div>
+                    </div>
+                    <div class="border-grey-500 bg-teal-300 shadow-md hover:border-[2px] h-[300px] w-[395px] p-2">boy</div>
+                </div>
+               
+            </div>
+            
+            <div class="grid grid-cols-2 m-5 border-grey-500 m-5 bg-teal-100 w-[830px]">
+                <div class="border-grey-500 m-2 bg-green-300 h-[300px] w-[400px] shadow-md border-[2px]">
+                    <div id="myPie" style="width:100%;max-width:400px;height:300px;"></div>
+                </div>
+                <div class="border-grey-500 m-2 bg-green-300 h-[300px] w-[400px] shadow-md border-[2px]">say</div>
+                <div class="border-grey-500 m-2 bg-green-300 h-[300px] w-[400px] shadow-md hover:border-[2px]">car</div>
+                <div class="border-grey-500 m-2 bg-green-300 h-[300px] w-[400px] shadow-md hover:border-[2px]">tie beauty</div>
+                <!-- <div class="border-grey-500 m-2 bg-teal-400 shadow-md hover:border-[2px]">band</div> -->
+            </div>
         </div>
     </main>
 
@@ -117,9 +182,9 @@
 
 
   <script>
-    // This code creates a pop-up.
-    alert('Welcome Angelica!');
-    console.log();
+        
   </script>
+  <script src="index.js"></script>
+  
 </body>
 </html>
